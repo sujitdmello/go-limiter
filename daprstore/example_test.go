@@ -5,7 +5,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/sethvargo/go-limiter/daprstore"
+	"github.com/sujitdmello/go-limiter/daprstore"
 )
 
 func ExampleNew() {

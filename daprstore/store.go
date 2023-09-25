@@ -12,8 +12,8 @@ import (
 	"time"
 
 	dapr "github.com/dapr/go-sdk/client"
-	"github.com/sethvargo/go-limiter"
-	"github.com/sethvargo/go-limiter/internal/fasttime"
+	"github.com/sujitdmello/go-limiter"
+	"github.com/sujitdmello/go-limiter/internal/fasttime"
 )
 
 const DEFAULT_STATE_STORE_NAME = "statestore"

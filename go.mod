@@ -1,4 +1,4 @@
-module github.com/sethvargo/go-limiter
+module github.com/sujitdmello/go-limiter
 
 go 1.14
 
