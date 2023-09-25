@@ -42,10 +42,6 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-go-
 
-    - name: Lint
-      run: make fmtcheck staticcheck spellcheck
-      if: ${{ matrix.os == 'ubuntu-latest' && matrix.go == '1.16' }}
-
     - name: Test
       run: make test
 

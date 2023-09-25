@@ -1,16 +1,21 @@
-package noopstore_test
+package daprstore_test
 
 import (
 	"context"
 	"log"
+	"time"
 
-	"github.com/sethvargo/go-limiter/noopstore"
+	"github.com/sujitdmello/go-limiter/daprstore"
 )
 
 func ExampleNew() {
 	ctx := context.Background()
 
-	store, err := noopstore.New()
+	store, err := daprstore.New(&daprstore.Config{
+		Tokens:         15,
+		Interval:       time.Minute,
+		StateStoreName: "statestore",
+	})
 	if err != nil {
 		log.Fatal(err)
 	}

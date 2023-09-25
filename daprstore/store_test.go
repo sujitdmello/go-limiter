@@ -1,4 +1,4 @@
-package memorystore
+package daprstore
 
 import (
 	"context"
@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/sethvargo/go-limiter/internal/fasttime"
+	"github.com/sujitdmello/go-limiter/internal/fasttime"
 )
 
 func TestFillRate(t *testing.T) {
@@ -50,10 +50,8 @@ func TestStore_Exercise(t *testing.T) {
 	ctx := context.Background()
 
 	s, err := New(&Config{
-		Tokens:        5,
-		Interval:      3 * time.Second,
-		SweepInterval: 24 * time.Hour,
-		SweepMinTTL:   24 * time.Hour,
+		Tokens:   5,
+		Interval: 3 * time.Second,
 	})
 	if err != nil {
 		t.Fatal(err)
@@ -240,10 +238,8 @@ func TestStore_Take(t *testing.T) {
 			key := testKey(t)
 
 			s, err := New(&Config{
-				Interval:      tc.interval,
-				Tokens:        tc.tokens,
-				SweepInterval: 24 * time.Hour,
-				SweepMinTTL:   24 * time.Hour,
+				Interval: tc.interval,
+				Tokens:   tc.tokens,
 			})
 			if err != nil {
 				t.Fatal(err)
