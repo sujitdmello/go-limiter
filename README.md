@@ -8,7 +8,7 @@ This fork of the original repo adds the [DAPR State Store](./daprstore/) as a ne
 
 This extension was created to show how DAPR State can be used as a distributed token bucket for rate limiting.
 
-See (./daprsample/README.md) for the design approach and sample application that uses this library.
+See [README](./daprsample/README.md) for the design approach and sample application that uses this library.
 
 ## DAPR State Store
 
